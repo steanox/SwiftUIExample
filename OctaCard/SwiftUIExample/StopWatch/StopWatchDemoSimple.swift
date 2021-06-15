@@ -30,8 +30,9 @@ struct StopWatchDemoSimple: View {
             .frame(
                 width: UIScreen.main.bounds.width,
                 height: UIScreen.main.bounds.width)
-            
+           
             Button(action: {
+                
                 Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (_) in
                     self.currentSecond += 0.01
                 }

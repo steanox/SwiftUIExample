@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
     var mentor: MentorData
+    
+    @State var x = 0
+    @Environment(\.colorScheme) var currentColorScheme
+    
+    
     var body: some View {
         ZStack {
             VStack {
@@ -35,7 +41,14 @@ struct ProfileView: View {
                         VStack{
                             InfoView(image: "envelope.circle",text: "\(mentor.email)")
                             InfoView(image: "phone.circle",text: "\(mentor.phone)")
+                            if currentColorScheme == .dark{
+                                Text("dark")
+                            }else{
+                                Text("LIght")
+                            }
                             Spacer()
+                            
+                            
                         }.padding(.all)
                     }
                 }.offset(y: -75)
@@ -46,10 +59,12 @@ struct ProfileView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
         Group{
             ProfileView(mentor: MentorData.defaultData().first!).environment(\.colorScheme, .dark)
-//            ContentView().environment(\.colorScheme, .dark)
+            ProfileView(mentor: MentorData.defaultData().first!).environment(\.colorScheme, .light)
+            //ContentView().environment(\.colorScheme, .dark)
         }
     }
 }
@@ -73,6 +88,6 @@ struct InfoView: View {
                     .foregroundColor(.gray)
                     Spacer()
                 }.padding(.horizontal)
-        )
+            )
     }
 }

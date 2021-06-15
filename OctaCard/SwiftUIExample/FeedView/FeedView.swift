@@ -21,7 +21,7 @@ struct FeedView: View{
             .navigationBarTitle("Feed")
         }
         .onAppear {
-            self.networkManager.fetchData()
+            //self.networkManager.fetchData()
         }
     }
 }

@@ -49,6 +49,7 @@ struct StopWatchDemo: View {
 
 struct Clock: View{
     @Binding var secondTime: Double
+    
     func tick(at tick: Int) -> some View{
         VStack{
             Rectangle()

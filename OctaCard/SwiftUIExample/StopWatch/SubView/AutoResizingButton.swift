@@ -82,8 +82,7 @@ struct SizeKey: PreferenceKey{
 
 fileprivate struct EqualSize: ViewModifier{
     @Environment(\.size) private var buttonSize
-    @State var width: CGFloat?
-    
+
     func body(content: Content) -> some View {
         
         content
@@ -91,6 +90,7 @@ fileprivate struct EqualSize: ViewModifier{
                 Color.clear.preference(key: SizeKey.self, value: [geo.size])
             })
             .frame(width: buttonSize?.width , height: buttonSize?.height)
+        
     }
 }
 

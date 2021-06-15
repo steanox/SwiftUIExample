@@ -22,6 +22,10 @@
 		7D2B6A4A24A0D65500507A3E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B6A4924A0D65500507A3E /* WebView.swift */; };
 		7D2B6A4E24A2121200507A3E /* MenuSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B6A4D24A2121200507A3E /* MenuSelectionView.swift */; };
 		7D2B6A5224A224BA00507A3E /* MenuSelectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B6A5124A224BA00507A3E /* MenuSelectionCardView.swift */; };
+		7D61541924C689BD00A372A1 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61541824C689BD00A372A1 /* SwiftUIView.swift */; };
+		7D61541D24C9A1F900A372A1 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D61541C24C9A1F900A372A1 /* View1.swift */; };
+		7D9940F52542E332000464C3 /* asd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9940F42542E332000464C3 /* asd.swift */; };
+		7DA78E8325492DC300F8F874 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DA78E8225492DC300F8F874 /* test.swift */; };
 		7DB8C78724AC890B0055FF82 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB8C78624AC890B0055FF82 /* Badge.swift */; };
 		7DB8C78924AC94160055FF82 /* BadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB8C78824AC94150055FF82 /* BadgeSymbol.swift */; };
 		7DB8C78B24AEFB5C0055FF82 /* RotatedBadgeSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB8C78A24AEFB5C0055FF82 /* RotatedBadgeSymbol.swift */; };
@@ -54,6 +58,10 @@
 		7D2B6A4C24A0D71000507A3E /* OctaCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OctaCard.entitlements; sourceTree = "<group>"; };
 		7D2B6A4D24A2121200507A3E /* MenuSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionView.swift; sourceTree = "<group>"; };
 		7D2B6A5124A224BA00507A3E /* MenuSelectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectionCardView.swift; sourceTree = "<group>"; };
+		7D61541824C689BD00A372A1 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		7D61541C24C9A1F900A372A1 /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
+		7D9940F42542E332000464C3 /* asd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asd.swift; sourceTree = "<group>"; };
+		7DA78E8225492DC300F8F874 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		7DB8C78624AC890B0055FF82 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		7DB8C78824AC94150055FF82 /* BadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeSymbol.swift; sourceTree = "<group>"; };
 		7DB8C78A24AEFB5C0055FF82 /* RotatedBadgeSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatedBadgeSymbol.swift; sourceTree = "<group>"; };
@@ -108,6 +116,7 @@
 				7D29F4CD249CA05400F43587 /* LaunchScreen.storyboard */,
 				7D29F4D0249CA05400F43587 /* Info.plist */,
 				7D29F4CA249CA05400F43587 /* Preview Content */,
+				7D9940F42542E332000464C3 /* asd.swift */,
 			);
 			path = OctaCard;
 			sourceTree = "<group>";
@@ -143,6 +152,8 @@
 		7DD690AF24C147AE00501DE6 /* SwiftUIExample */ = {
 			isa = PBXGroup;
 			children = (
+				7D61541C24C9A1F900A372A1 /* View1.swift */,
+				7D61541824C689BD00A372A1 /* SwiftUIView.swift */,
 				7DD690B424C148E900501DE6 /* MentorList */,
 				7DD690B124C148A600501DE6 /* MentorProfileDetail */,
 				7DD690B024C147BD00501DE6 /* MentorListMultipleScroll */,
@@ -203,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				7D29F4DC249CCD7500F43587 /* FeedView.swift */,
+				7DA78E8225492DC300F8F874 /* test.swift */,
 			);
 			path = FeedView;
 			sourceTree = "<group>";
@@ -318,8 +330,11 @@
 			files = (
 				7D2B6A4E24A2121200507A3E /* MenuSelectionView.swift in Sources */,
 				7D2B6A4424A0B12200507A3E /* NetworkManager.swift in Sources */,
+				7D61541924C689BD00A372A1 /* SwiftUIView.swift in Sources */,
 				7DB8C79024B3419A0055FF82 /* PersonsCategory.swift in Sources */,
+				7D9940F52542E332000464C3 /* asd.swift in Sources */,
 				7DB8C78724AC890B0055FF82 /* Badge.swift in Sources */,
+				7D61541D24C9A1F900A372A1 /* View1.swift in Sources */,
 				7D2B6A4A24A0D65500507A3E /* WebView.swift in Sources */,
 				7DB8C79D24BC74F40055FF82 /* BasicTableViewWithSwiftUI.swift in Sources */,
 				7D29F4DF249CDF2F00F43587 /* PostData.swift in Sources */,
@@ -331,6 +346,7 @@
 				7DB8C7A524BE08690055FF82 /* MentolDetailView.swift in Sources */,
 				7DB8C78D24AEFBFB0055FF82 /* BadgeBackground.swift in Sources */,
 				7D29F4C5249CA05300F43587 /* SceneDelegate.swift in Sources */,
+				7DA78E8325492DC300F8F874 /* test.swift in Sources */,
 				7DD690B824C14A1300501DE6 /* StopWatchDemoSimple.swift in Sources */,
 				7DD690BD24C1569700501DE6 /* AutoResizingButton.swift in Sources */,
 				7DB8C78B24AEFB5C0055FF82 /* RotatedBadgeSymbol.swift in Sources */,

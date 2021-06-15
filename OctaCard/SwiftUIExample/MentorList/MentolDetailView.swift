@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct MentolDetailView: View {
     
@@ -22,6 +23,11 @@ struct MentolDetailView: View {
             Text("\(mentor.name)".capitalized)
                 .font(.system(size: 36, weight: .bold, design: .rounded))
         }
+    }
+    
+    
+    func onSuccess(){
+        Router.showMain()
         
     }
 }
@@ -40,3 +46,62 @@ struct GOPMentor: Identifiable{
     var imageName:String
     
 }
+
+
+
+import Foundation
+import UIKit
+import SwiftUI
+
+class Router {
+    
+    class var window: UIWindow? {
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            if let sceneDelegate = scene.delegate as? SceneDelegate {
+                let window = UIWindow(windowScene: scene)
+                sceneDelegate.window = window
+                window.makeKeyAndVisible()
+                return window
+            }
+        }
+        return nil
+    }
+    
+    static func showMain() {
+        window?.rootViewController = UIHostingController(rootView: HomeView())
+    }
+    
+    static func showLogin(){
+        window?.rootViewController = UIHostingController(rootView: SignInView())
+    }
+    
+}
+
+
+struct HomeView: View{
+    var body: some View {
+        VStack{
+            Text("HomeView")
+            Button(action: {
+                Router.showLogin()
+            }) {
+                Text("Return to sign in")
+            }
+        }
+    }
+}
+
+struct SignInView: View{
+    var body: some View {
+        VStack{
+            Text("SignIn")
+            Button(action: {
+                Router.showMain()
+            }) {
+                Text("Go to Home")
+            }
+        }
+    }
+}
+
+

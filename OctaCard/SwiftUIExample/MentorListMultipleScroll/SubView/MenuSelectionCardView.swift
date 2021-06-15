@@ -10,18 +10,24 @@ import SwiftUI
 import CoreImage
 import CoreImage.CIFilterBuiltins
 
+class UserSession: ObservableObject{
+    @Published var name: String = ""
+}
+
 struct MenuSelectionCardView: View {
     var mentor: MentorRecord
     
-    var image: Image?
+    @EnvironmentObject var session: UserSession
+    
+    
+    @State var image: Image?
     
     var body: some View {
         
         ZStack(alignment: .bottom){
-            Image(mentor.fields.imageName)
+            image?
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                
             VStack(alignment: .leading){
                 Text("\(mentor.fields.name)")
                     .font(.system(size: 30, weight: .heavy, design: .rounded))
@@ -35,24 +41,24 @@ struct MenuSelectionCardView: View {
                 height: screen.bounds.height * 0.15, alignment: .topLeading)
             .background(Color.black.opacity(0.8))
         }
+        .onAppear {
+            self.loadImage(self.mentor.fields.imageName)
+        }
         .frame(
             width: screen.bounds.width * 0.75,
             height: screen.bounds.height * 0.4)
         .cornerRadius(16)
         .shadow(radius: 4)
-        
-
-        
     }
     
-    mutating func loadImage(_ imageName: String){
+     func loadImage(_ imageName: String){
         guard let inputImage = UIImage(named: imageName) else { return }
         let beginImage = CIImage(image: inputImage)
         
         let context = CIContext()
         let currentFilter = CIFilter.sepiaTone()
         currentFilter.inputImage = beginImage
-        currentFilter.intensity = 0.1
+        currentFilter.intensity = 1
         
         
         guard let outputImage = currentFilter.outputImage else { return }
@@ -67,7 +73,7 @@ struct MenuSelectionCardView: View {
 
 struct MenuSelectionCardView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuSelectionCardView(mentor: MentorRecord(id: "asd", fields: Mentor(name: "Yenny", imageName: "yenny", domain: "Manager"), createdTime: "asd"))
+        MenuSelectionCardView(mentor: MentorRecord(id: "asd", fields: Mentor(name: "Octa", imageName: "octa", domain: "Manager"), createdTime: "asd"))
     }
 }
 
